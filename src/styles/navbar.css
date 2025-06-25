@@ -1,0 +1,91 @@
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.header-div-1,
+.header-div-2 {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.header-div-1 {
+    justify-content: flex-start;
+}
+
+.header-div-2 {
+    justify-content: flex-end;
+    gap: 50px;
+}
+
+.header-div-1 > h1 {
+    color: var(--bege);
+    font-size: 1.7rem;
+    margin-right: 20px;
+}
+
+.header-div-1 > h1 > span{
+    color: var(--yellow);
+}
+
+.header-div-1 > input{
+    border-radius: 3px;
+    border: solid 1px var(--deep-blue-2);
+    background-color: var(--deep-blue-2);
+    color: var(--light-blue);
+    padding: 8px;
+    font-style: italic;
+    width: 40%;
+    outline: none;
+}
+
+.header-div-1 > input::placeholder {
+    color: var(--light-blue);
+}
+
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+    border-right: 2px solid var(--deep-blue-2);
+    padding: 3px 50px 3px 0;
+}
+
+.header-nav > li{
+    list-style: none;
+}
+
+.header-nav > li > a {
+    text-decoration: none;
+    color: var(--bege);
+    font-size: 0.8rem;
+}
+
+.header-nav > li > a:hover {
+    color: var(--red);
+    transition: 0.7s;
+}
+
+.btn-div > button {
+    border-radius: 3px;
+    padding: 5px 20px;
+    font-size: 0.8rem;
+    font-family: var(--font-garet);
+    cursor: pointer;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+    margin-right: 10px;
+}
+
+.btn-singup {
+    background-color: var(--yellow);
+    color: var(--deep-blue);
+    border: 1px solid var(--yellow);
+}

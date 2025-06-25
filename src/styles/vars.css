@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'HK';
+    src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');;
+}
+
+@font-face {
+    font-family: 'Garet';
+    src: url('../assets/fonts/Garet-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Garet Heavy';
+    src: url('../assets/fonts/Garet-Heavy.ttf') format('truetype');
+}
+
+:root {
+    /*  Collors */
+    --deep-blue: #001222;
+    --deep-blue-2: #09253d;
+    --blue: #004769;
+    --light-blue: #4a626d;
+    --red: #d54410;
+    --yellow: #ffac2f;
+    --bege: #fad7c5;
+
+
+    /* Fonts */
+    --font-hk: "HK", sans-serif;
+    --font-garet: "Garet", sans-serif;
+    --font-garet-heavy: "Garet Heavy", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-garet);
+    background-color: var(--deep-blue);
+}
