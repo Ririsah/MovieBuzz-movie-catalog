@@ -1,0 +1,62 @@
+.recommended-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.recommended-title,
+.recommended-movies {
+    width: 80%;
+}
+
+.recommended-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.recommended-title > h3 {
+    font-size: 1.3rem;
+    color: var(--blue);
+}
+
+.recommended-arrow {
+    width: 8px;
+    margin-left: 20px;
+}
+
+.recommended-wrapper > hr {
+    width: 100%;
+    border: 1px solid var(--blue);
+}
+
+.recommended-movies {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.recommended-movie-card {
+    margin-top: 30px;
+}
+
+.recommended-movie-img {
+    height: 300px;
+}
+
+.recommended-movie-card > h4 {
+    font-family: var(--font-hk);
+    font-size: 1.3rem;
+    color: var(--red);
+    font-weight: bold;
+    margin: 20px 0 5px 0;
+}
+
+.recommended-movie-card > p {
+    font-size: 0.5rem;
+    color: var(--bege);
+}

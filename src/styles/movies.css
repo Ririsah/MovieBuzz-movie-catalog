@@ -1,0 +1,141 @@
+.movies-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.movies-title,
+.movies-catalog {
+    width: 80%;
+}
+
+.movies-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.movies-title > h3 {
+    font-size: 1.3rem;
+    color: var(--blue);
+}
+
+.movies-arrow {
+    width: 8px;
+    margin-left: 20px;
+}
+
+.movies-wrapper > hr {
+    width: 100%;
+    border: 1px solid var(--blue);
+}
+
+.movies-catalog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.movies-catalog-search {
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--deep-blue-2);
+    color: var(--light-blue);
+    outline: none;
+    overflow: hidden;
+    margin: 50px 0 20px 0;
+}
+
+.search-img {
+    width: 10px;
+}
+
+.movies-catalog-search > button {
+    width: 3%;
+    padding: 10px;
+    border: none;
+    border-right: 1px solid var(--deep-blue);
+    background-color: transparent;
+}
+
+.movies-catalog-search > input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.movies-catalog-movies {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    width: 100%;
+}
+
+.movie-card {
+    margin-bottom: 30px;
+}
+
+.movie-card-img {
+    position: relative;
+    height: 170px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 11, 36, 0.836);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    font-family: var(--font-garet);
+    color: var(--red);
+    font-size: 1.7rem;
+}
+
+.movie-card-img:hover .overlay {
+    opacity: 1;
+}
+
+.movie-card-img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.movie-descriptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.movie-card-text > h4 {
+    font-family: var(--font-hk);
+    font-size: 1.3rem;
+    color: var(--yellow);
+}
+
+.movie-card-text > p {
+    font-size: 0.7rem;
+    color: var(--blue);
+}
+
+.raiting-img {
+    width: 70px;
+}

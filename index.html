@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./src/styles/vars.css">
     <link rel="stylesheet" href="./src/styles/navbar.css">
     <link rel="stylesheet" href="./src/styles/cover.css">
+    <link rel="stylesheet" href="./src/styles/recommended.css">
+    <link rel="stylesheet" href="./src/styles/movies.css">
+    <link rel="stylesheet" href="./src/styles/footer.css">
 </head>
 <body>
 
@@ -45,10 +48,79 @@
     </div>
 
 
-    <!-------------------------------- Cover Section -------------------------------->
-    <div>
-        
+    <!-------------------------------- Recommended Section -------------------------------->
+    <div class="recommended-wrapper">
+        <div class="recommended-title">
+            <h3>Recommended</h3>
+            <img class="recommended-arrow" src="src/assets/images/arrow.png" alt="arrow">
+        </div>
+        <hr>
+        <div class="recommended-movies"></div>
     </div>
+
+
+    <!-------------------------------- Movies Section -------------------------------->
+    <main class="movies-wrapper">
+        <div class="movies-title">
+            <h3>Movies</h3>
+            <img class="movies-arrow" src="src/assets/images/arrow.png" alt="arrow">
+        </div>
+        <hr>
+        <div class="movies-catalog">
+            <div class="movies-catalog-search">
+                <button><img class="search-img" src="src/assets/images/search.png" alt=""></button>
+                <input type="text" placeholder="looking for something?">
+            </div>
+            <div class="movies-catalog-movies"></div>
+        </div>
+    </main>
+
+
+    <!-------------------------------- Footer Section -------------------------------->
+    <footer class="footer-wrapper">
+        <div>
+            <h5><span>Movie</span>Buzz</h5>
+            <div>
+                <button><img class="socials-img" src="src/assets/images/socials_1.png" alt=""></button>
+                <button><img class="socials-img" src="src/assets/images/socials_2.png" alt=""></button>
+                <button><img class="socials-img" src="src/assets/images/socials_3.png" alt=""></button>
+                <button><img class="socials-img" src="src/assets/images/socials_4.png" alt=""></button>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a type 
+                specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
+                remaining essentially unchanged. It was popularised in the 1960s with the release 
+                of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
+                publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <div class="footer-columns">
+                <ul>
+                    <h5>contact</h5>
+                    <li>Movie@Buzz.com</li>
+                    <li>+(21) 4254 6234 18</li>
+                    <li>+(21) 7854 5843 09</li>
+                </ul>
+                <ul>
+                    <h5>navigation</h5>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/recommended">Recommended</a></li>
+                    <li><a href="/movies">All movies</a></li>
+                    <li><a href="/contact">Contact us</a></li>
+                </ul>
+                <ul>
+                    <h5>services</h5>
+                    <li><a href="/signin">sign in</a></li>
+                    <li><a href="/login">log in</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./src/index.js"></script>
 
 </body>
 </html>
