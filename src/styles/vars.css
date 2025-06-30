@@ -15,12 +15,13 @@
 
 :root {
     /*  Collors */
-    --deep-blue: #001222;
-    --deep-blue-2: #09253d;
-    --blue: #004769;
+    --deep-blue: #000b14;
+    --deep-blue-2: #041625;
+    --blue: #01334b;
+    --blue-2: #336d89;
     --light-blue: #4a626d;
     --red: #d54410;
-    --yellow: #ffac2f;
+    --yellow: #ff9900;
     --bege: #fad7c5;
 
 

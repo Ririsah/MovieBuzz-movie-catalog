@@ -1,0 +1,95 @@
+.footer-wrapper {
+    background-color: var(--deep-blue-2);
+}
+
+.footer-container {
+    padding: 30px 20px;
+}
+
+.footer-div-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-div-1 > h5 {
+    font-size: 2.3rem;
+    color: var(--bege);
+}
+
+.footer-div-1 > h5 > span {
+    color: var(--yellow);
+}
+
+.footer-buttons > button {
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.socials-img {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.footer-wrapper > div > hr {
+    border: 2px solid var(--blue-2);
+    margin-bottom: 30px;
+}
+
+.footer-div-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-div-2 > div > p {
+    font-size: 0.8rem;
+    color: var(--blue-2);
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: flex-start;
+    gap: 50px;
+}
+
+.footer-ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.footer-ul > h6 {
+    font-size: 2rem;
+    font-family: var(--font-hk);
+    color: var(--bege);
+    border-bottom: 3px solid var(--yellow);
+    margin-bottom: 20px;
+}
+
+.footer-ul > li {
+    list-style: none;
+    color: var(--bege);
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.footer-ul > li > a {
+    text-decoration: none;
+    color: var(--bege);
+}
+
+.footer-informations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+    padding: 8px;
+    font-size: 0.9rem;
+    color: var(--deep-blue);
+}

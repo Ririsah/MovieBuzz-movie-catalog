@@ -46,7 +46,6 @@
     color: var(--light-blue);
 }
 
-
 .header-nav {
     display: flex;
     gap: 20px;
@@ -88,4 +87,9 @@
     background-color: var(--yellow);
     color: var(--deep-blue);
     border: 1px solid var(--yellow);
+}
+
+.btn-div > button:hover {
+    transform: scale(1.08);
+    transition: 0.1s;
 }

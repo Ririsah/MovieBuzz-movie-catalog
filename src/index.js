@@ -1,21 +1,22 @@
 const recommended = [
-    { title: "Echoes of Tomorrow", synopsis: "In a future where memory loss is widespread, one woman races to recover her identity and uncover the cause before it's too late.", image: "movie_1" },
-    { title: "Neon Rain", synopsis: "A detective in a neon-lit cyberpunk city uncovers a dangerous conspiracy lurking beneath the glowing skyline.", image: "movie_2" },
-    { title: "The Glass Shore", synopsis: "Stranded on a mysterious invisible island, a group of survivors must explore its secrets to find a way back home.", image: "movie_3" },
-    { title: "Crimson Pulse", synopsis: "A rogue AI threatens to ignite global conflict, forcing a reluctant hacker to stop it before disaster strikes.", image: "movie_4" },
-    { title: "Parallel Tides", synopsis: "Two scientists discover a mirrored world where their reflections hold dangerous secrets and threaten their reality.", image: "movie_5" },
-    { title: "Lunar Veil", synopsis: "On the moon’s dark side, a crew uncovers an ancient presence that challenges their mission and survival.", image: "movie_6" },
-    { title: "Ashes and Code", synopsis: "In a machine-rebuilt world, an orphaned boy sets out to restore humanity and uncover the truth of his past.", image: "movie_7" }
+    { title: "Echoes of Tomorrow", year: "2019", genre: "Drama", image: "movie_1" },
+    { title: "Neon Rain", year: "1998", genre: "Sci-Fi", image: "movie_2" },
+    { title: "The Glass Shore", year: "2007", genre: "Mystery", image: "movie_3" },
+    { title: "Crimson Pulse", year: "2024", genre: "Thriller", image: "movie_4" },
+    { title: "Parallel Tides", year: "1985", genre: "Sci-Fi", image: "movie_5" },
+    { title: "Lunar Veil", year: "2011", genre: "Horror", image: "movie_6" },
+    { title: "Ashes and Code", year: "2025", genre: "Adventure", image: "movie_7" }
 ];
+
 
 const recommended_container = document.querySelector('.recommended-movies');
 
 recommended.forEach(film => {
     const filmHTML = `
         <div class="recommended-movie-card">
-            <div class="recommended-movie-img" style="background: url('src/assets/images/${film.image}.jpg') center center / cover no-repeat;"></div>
+            <button class="recommended-movie-img" style="background: url('src/assets/images/${film.image}.jpg') center center / cover no-repeat;"></button>
             <h4>${film.title}</h4>
-            <p>${film.synopsis}</p>
+            <p>${film.year} • ${film.genre}</p>
         </div>
     `;
     recommended_container.innerHTML += filmHTML;
