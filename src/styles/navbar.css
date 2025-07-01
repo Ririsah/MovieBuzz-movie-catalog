@@ -3,6 +3,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 20px;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
 }
 
 .header-div-1,
@@ -92,4 +95,9 @@
 .btn-div > button:hover {
     transform: scale(1.08);
     transition: 0.1s;
+}
+
+.sticky-nav {
+    position: fixed;
+    background-color: #002536;
 }

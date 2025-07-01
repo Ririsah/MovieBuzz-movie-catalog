@@ -21,10 +21,10 @@
         </div>
         <div class="header-div-2">
             <nav class="header-nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Recomended</a></li>
-                <li><a href="#">All movies</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="#cover">Home</a></li>
+                <li><a href="#recommended">Recomended</a></li>
+                <li><a href="#movies">All movies</a></li>
+                <li><a href="#footer">Contact us</a></li>
             </nav>
             <div class="btn-div">
                 <button class="btn-login">log in</button>
@@ -35,7 +35,7 @@
     
 
     <!-------------------------------- Cover Section -------------------------------->
-    <div class="cover-wrapper">
+    <div id="cover" class="cover-wrapper">
         <div class="cover-content">
             <h2>The <span>buzz</span> starts with every play.</h2>
             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
@@ -49,7 +49,7 @@
 
 
     <!-------------------------------- Recommended Section -------------------------------->
-    <div class="recommended-wrapper">
+    <div id="recommended" class="recommended-wrapper">
         <div class="recommended-title">
             <h3>Recommended</h3>
             <img class="recommended-arrow" src="src/assets/images/arrow.png" alt="arrow">
@@ -60,7 +60,7 @@
 
 
     <!-------------------------------- Movies Section -------------------------------->
-    <main class="movies-wrapper">
+    <main id="movies" class="movies-wrapper">
         <div class="movies-title">
             <h3>Movies</h3>
             <img class="movies-arrow" src="src/assets/images/arrow.png" alt="arrow">
@@ -68,16 +68,26 @@
         <hr>
         <div class="movies-catalog">
             <div class="movies-catalog-search">
-                <button><img class="search-img" src="src/assets/images/search.png" alt=""></button>
-                <input type="text" placeholder="looking for something?">
+                <button class="search-btn"><img class="search-img" src="src/assets/images/search.png" alt=""></button>
+                <input class="search-input" type="text" placeholder="looking for something?">
             </div>
-            <div class="movies-catalog-movies"></div>
+            <div class="catalog-container">
+                <div class="div-1 active-page catalog-movies"></div>
+                <div class="div-2 hidden catalog-movies"></div>
+                <div class="div-3 hidden catalog-movies"></div>
+            </div>
+        </div>
+        <hr>
+        <div class="movies-btns">
+            <button class="search-movies-1">1</button>
+            <button class="search-movies-2">2</button>
+            <button class="search-movies-3">3</button>
         </div>
     </main>
 
 
     <!-------------------------------- Footer Section -------------------------------->
-    <footer class="footer-wrapper">
+    <footer id="footer" class="footer-wrapper">
         <div class="footer-container">
             <div class="footer-div-1">
                 <h5><span>Movie</span>Buzz</h5>
