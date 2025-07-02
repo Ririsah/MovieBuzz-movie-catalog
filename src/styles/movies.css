@@ -57,15 +57,14 @@
 }
 
 .movies-catalog-search > button {
-    width: 3%;
     padding: 10px;
     border: none;
     border-right: 1px solid var(--deep-blue);
     background-color: transparent;
+    cursor: pointer;
 }
 
 .movies-catalog-search > input {
-    width: 90%;
     padding: 10px;
     border: none;
     background-color: transparent;
@@ -178,4 +177,35 @@
 
 .active-page {
     display: grid;
+}
+
+@media (max-width: 1400px) {
+    .movies-title,
+    .movies-catalog,
+    .movies-btns {
+        width: 95%;
+    }
+}
+
+@media (max-width: 999px) {
+    .catalog-movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .catalog-movies {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .movie-card-text > h4 {
+        font-size: 1rem;
+    }
+
+    .raiting-img {
+        width: 40px;
+    }
 }

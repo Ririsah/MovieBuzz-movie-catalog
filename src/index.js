@@ -8,19 +8,6 @@ const recommended = [
     { title: "Ashes and Code", year: "2025", genre: "Adventure", image: "movie_7" }
 ];
 
-const recommended_container = document.querySelector('.recommended-movies');
-
-recommended.forEach(film => {
-    const filmHTML = `
-        <div class="recommended-movie-card">
-            <button class="recommended-movie-img" style="background: url('src/assets/images/${film.image}.jpg') center center / cover no-repeat;"></button>
-            <h4>${film.title}</h4>
-            <p>${film.year} • ${film.genre}</p>
-        </div>
-    `;
-    recommended_container.innerHTML += filmHTML;
-});
-
 const films = [
     { title: "The City", year: "2019", duration: "2 Hr 15 Mns", raiting: "raiting_1", poster: "movie_8", genre: "Drama" },
     { title: "Iron Vow", year: "2020", duration: "1 Hr 48 Mns", raiting: "raiting_2", poster: "movie_9", genre: "Action" },
@@ -72,6 +59,15 @@ const films = [
     { title: "Neon Flux", year: "2024", duration: "2 Hr 0 Mns", raiting: "raiting_5", poster: "movie_12", genre: "Action" },
 ];
 
+
+const container_cover = document.querySelector('.cover-wrapper');
+const navbar = document.querySelector('.header-wrapper');
+
+const btn_menu_toggle = document.querySelector('.menu-toggle');
+const nav_links = document.querySelector('.header-div-2');
+
+const recommended_container = document.querySelector('.recommended-movies');
+
 const movies_catalog = document.querySelector('.catalog-movies');
 const div1 = document.querySelector('.div-1');
 const div2 = document.querySelector('.div-2');
@@ -81,6 +77,62 @@ const btn1 = document.querySelector('.search-movies-1');
 const btn2 = document.querySelector('.search-movies-2');
 const btn3 = document.querySelector('.search-movies-3');
 
+const btn_search = document.querySelector('.search-btn');
+
+
+// Sticky navbar animation
+const nav_height = navbar.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) {
+        navbar.classList.add('sticky-nav');
+        container_cover.style.paddingTop = `${nav_height}px`;
+    } else {
+        navbar.classList.remove('sticky-nav');
+        container_cover.style.paddingTop = `0`;
+    }
+};
+
+const coverObserver = new IntersectionObserver (stickyNav, {
+    root: null,
+    threshold: 0,
+});
+
+coverObserver.observe(container_cover);
+
+
+// Menu toggle funtionality
+btn_menu_toggle.addEventListener('click', function() {
+    if (nav_links.classList.contains('nav-links-hidden')) {
+        nav_links.classList.remove('nav-links-hidden');
+    } else {
+        nav_links.classList.add('nav-links-hidden');
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1400) {
+        nav_links.classList.remove('nav-links-hidden');
+    }
+});
+
+
+// Recommended movies
+recommended.forEach((film, i) => {
+    const filmHTML = `
+        <div class="recommended-movie-card recommended-${i}">
+            <button class="recommended-movie-img" style="background: url('src/assets/images/${film.image}.jpg') center center / cover no-repeat;"></button>
+            <h4>${film.title}</h4>
+            <p>${film.year} • ${film.genre}</p>
+        </div>
+    `;
+    recommended_container.innerHTML += filmHTML;
+});
+
+
+// Catalog movies
 const filmsPerPage = 16;
 
 function renderFilmsToDiv(filmsArray, containerDiv) {
@@ -131,9 +183,7 @@ btn3.addEventListener('click', () => showPage(3));
 showPage(1);
 
 
-
-const btn_search = document.querySelector('.search-btn');
-
+// Search bar functionality
 btn_search.addEventListener('click', function () {
     const input_search = document.querySelector('.search-input').value.toLowerCase().trim();
 
@@ -162,29 +212,13 @@ btn_search.addEventListener('click', function () {
     });
 });
 
+const input_search = document.querySelector('.search-input');
 
-//sticky navbar animation
-const container_cover = document.querySelector('.cover-wrapper');
-const navbar = document.querySelector('.header-wrapper');
-const navHeight = navbar.getBoundingClientRect().height;
-
-const stickyNav = function (entries) {
-    const [entry] = entries;
-
-    if (!entry.isIntersecting) {
-        navbar.classList.add('sticky-nav');
-        cover.style.paddingTop = `${navHeight}px`;
-    } else {
-        navbar.classList.remove('sticky-nav');
-        cover.style.paddingTop = `0`;
+input_search.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        btn_search.click();
     }
-};
-
-const coverObserver = new IntersectionObserver (stickyNav, {
-    root: null,
-    threshold: 0,
 });
 
-coverObserver.observe(container_cover);
 
 

@@ -69,3 +69,55 @@
     font-size: 0.8rem;
     color: var(--bege);
 }
+
+@media (max-width: 1400px) {
+    .recommended-title,
+    .recommended-movies {
+        width: 95%;
+    }
+}
+
+@media (max-width: 999px) {
+    .recommended-movies {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        gap: 0.7rem;
+    }
+
+    .recommended-5 {
+        display: none;
+    }
+
+    .recommended-6 {
+        display: none;
+    }
+}
+
+@media (max-width: 599px) {
+    .recommended-movies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        gap: 1rem;
+    }
+
+    .recommended-3 {
+        display: none;
+    }
+
+    .recommended-4 {
+        display: none;
+    }
+
+    .recommended-movie-img {
+        height: 230px;
+    }
+
+    .recommended-movie-card > h4 {
+        font-size: 1rem;
+    }
+
+    .recommended-movie-card > p {
+        font-size: 0.6rem;
+    }
+}
